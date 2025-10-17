@@ -1,0 +1,52 @@
+.lazy-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.lazy-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lazy-section-placeholder {
+  height: 200px;
+  background: linear-gradient(90deg, var(--bg-light) 25%, var(--bg-dark) 50%, var(--bg-light) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lazy-section {
+    transform: translateY(20px);
+  }
+  
+  .lazy-section-placeholder {
+    height: 150px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .lazy-section {
+    transition: none;
+    transform: none;
+  }
+  
+  .lazy-section-placeholder {
+    animation: none;
+  }
+}
+
+

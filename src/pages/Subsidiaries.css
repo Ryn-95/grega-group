@@ -1,0 +1,316 @@
+.subsidiaries-page {
+  width: 100%;
+  background-color: #000000;
+}
+
+/* Hero Section */
+.subsidiaries-hero {
+  padding: 8rem 0 6rem;
+  background-color: #000000;
+  text-align: center;
+}
+
+.subsidiaries-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.subsidiaries-hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+.subsidiaries-subtitle {
+  font-size: 1.125rem;
+  color: #b4b4b4;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Cabinets Section */
+.cabinets-section {
+  padding: 6rem 0;
+  background-color: #000000;
+}
+
+.cabinets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.cabinet-card {
+  aspect-ratio: 3/4;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabinet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cabinet-card:hover::before {
+  opacity: 1;
+}
+
+.cabinet-card:hover {
+  transform: translateY(-10px);
+}
+
+.cabinet-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.cabinet-icon {
+  font-size: 5rem;
+  filter: brightness(0) invert(1);
+}
+
+.cabinet-info {
+  position: relative;
+  z-index: 1;
+}
+
+.cabinet-info h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+}
+
+.cabinet-sector {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cabinet-slogan {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.cabinet-link {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.cabinet-card:hover .cabinet-link {
+  transform: translateX(5px);
+}
+
+/* Model Section */
+.model-section {
+  padding: 6rem 0;
+  background-color: #000000;
+  border-top: 1px solid #222222;
+}
+
+.model-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.model-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.model-text h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.model-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #b4b4b4;
+  font-weight: 300;
+}
+
+.model-image img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Advantages Section */
+.advantages-section {
+  padding: 6rem 0;
+  background-color: #000000;
+  border-top: 1px solid #222222;
+}
+
+.advantages-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.advantage-item {
+  padding: 3rem 2rem;
+  border: 1px solid #222222;
+  transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+  border-color: #8B7355;
+  transform: translateY(-5px);
+}
+
+.advantage-icon {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.advantage-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+.advantage-item p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #b4b4b4;
+  font-weight: 300;
+}
+
+/* CTA Section */
+.subsidiaries-cta {
+  padding: 6rem 0 8rem;
+  background-color: #000000;
+  border-top: 1px solid #222222;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  color: #b4b4b4;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.cta-button {
+  background-color: #8B7355;
+  color: #ffffff;
+  padding: 1.125rem 3rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.cta-button:hover {
+  background-color: #6d5842;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cabinets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .model-content {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .subsidiaries-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .subsidiaries-subtitle {
+    font-size: 1rem;
+  }
+
+  .model-text h2,
+  .advantages-section h2,
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cabinet-card {
+    padding: 2rem;
+  }
+}

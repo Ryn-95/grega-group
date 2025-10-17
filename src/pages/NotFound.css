@@ -1,0 +1,154 @@
+.not-found-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 4rem 0;
+}
+
+.not-found-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found-number {
+  font-size: 10rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #8B7355;
+  line-height: 1;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.not-found-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+.not-found-content p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #b4b4b4;
+  font-weight: 300;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 1.125rem 3rem;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 400;
+}
+
+.primary-button {
+  background-color: #8B7355;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background-color: #6d5842;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.secondary-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.not-found-links {
+  border-top: 1px solid #222222;
+  padding-top: 3rem;
+}
+
+.not-found-links h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+}
+
+.quick-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quick-links button {
+  background: none;
+  border: none;
+  color: #b4b4b4;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 300;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.quick-links button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #8B7355;
+  transition: width 0.3s ease;
+}
+
+.quick-links button:hover {
+  color: #8B7355;
+}
+
+.quick-links button:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .not-found-number {
+    font-size: 6rem;
+  }
+
+  .not-found-content h1 {
+    font-size: 2rem;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .quick-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+

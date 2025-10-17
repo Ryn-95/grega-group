@@ -1,0 +1,90 @@
+.scroll-progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.scroll-progress.top {
+  top: 0;
+}
+
+.scroll-progress.bottom {
+  bottom: 0;
+}
+
+.scroll-progress-bar {
+  height: 4px;
+  background: var(--primary-color);
+  transition: width 0.1s ease;
+  position: relative;
+  box-shadow: 0 0 10px rgba(139, 115, 85, 0.3);
+}
+
+.scroll-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
+  animation: shimmer 2s infinite;
+}
+
+.scroll-progress-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-progress:hover .scroll-progress-percentage {
+  opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scroll-progress-bar {
+    height: 3px;
+  }
+  
+  .scroll-progress-percentage {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar {
+    transition: none;
+  }
+  
+  .scroll-progress-bar::after {
+    animation: none;
+  }
+}
+
+

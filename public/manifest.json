@@ -1,0 +1,28 @@
+{
+  "name": "Grega Group - Leader en Gestion de Patrimoine",
+  "short_name": "Grega Group",
+  "description": "Leader en gestion de patrimoine indépendante avec 4 cabinets spécialisés et 3 Mds€ d'actifs sous gestion",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#8B7355",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance"],
+  "lang": "fr-FR",
+  "dir": "ltr"
+}
+

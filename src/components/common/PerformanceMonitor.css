@@ -1,0 +1,160 @@
+.performance-monitor {
+  position: fixed;
+  bottom: 170px;
+  right: 2rem;
+  z-index: 997;
+}
+
+.performance-monitor-toggle {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+  transition: all 0.3s ease;
+}
+
+.performance-monitor-toggle:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.4);
+}
+
+.performance-monitor-panel {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 300px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+.performance-monitor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-light);
+  border-radius: 12px 12px 0 0;
+}
+
+.performance-monitor-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.performance-monitor-close {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.performance-monitor-close:hover {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.performance-metrics {
+  padding: 1rem;
+}
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.metric-item:last-child {
+  border-bottom: none;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .performance-monitor {
+    bottom: 160px;
+    right: 1rem;
+  }
+  
+  .performance-monitor-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .performance-monitor-panel {
+    width: 280px;
+    bottom: 50px;
+  }
+  
+  .performance-monitor-header {
+    padding: 0.875rem;
+  }
+  
+  .performance-monitor-header h3 {
+    font-size: 0.9rem;
+  }
+  
+  .performance-metrics {
+    padding: 0.875rem;
+  }
+  
+  .metric-item {
+    padding: 0.625rem 0;
+  }
+  
+  .metric-label,
+  .metric-value {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .performance-monitor-panel {
+    width: calc(100vw - 1rem);
+    right: -0.5rem;
+  }
+}
+
+

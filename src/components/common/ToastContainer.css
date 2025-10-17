@@ -1,0 +1,62 @@
+.toast-container {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toast-container.top-right {
+  top: 1rem;
+  right: 1rem;
+}
+
+.toast-container.top-left {
+  top: 1rem;
+  left: 1rem;
+}
+
+.toast-container.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.toast-container.bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.toast-container.top-center {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast-container.bottom-center {
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Stack toasts vertically */
+.toast-container > * {
+  margin-bottom: 0.5rem;
+}
+
+.toast-container > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    transform: none !important;
+  }
+  
+  .toast-container.top-center,
+  .toast-container.bottom-center {
+    left: 1rem;
+    right: 1rem;
+  }
+}
+

@@ -1,0 +1,22 @@
+# robots.txt for Grega Group
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://www.gregagroup.fr/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 0
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+

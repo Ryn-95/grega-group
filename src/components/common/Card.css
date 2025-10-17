@@ -1,0 +1,16 @@
+.card {
+  background-color: #1a1a1a;
+  border-radius: 0;
+  padding: 2rem;
+  border: 1px solid #222222;
+  transition: all 0.3s ease;
+}
+
+.card-hoverable {
+  cursor: pointer;
+}
+
+.card-hoverable:hover {
+  transform: translateY(-5px);
+  border-color: #8B7355;
+}
