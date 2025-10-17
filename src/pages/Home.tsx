@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AnimatedText } from '../components/common';
+import { AnimatedText, LoadingScreen } from '../components/common';
 import './Home.css';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,6 +24,10 @@ export const Home: React.FC = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
 
   // Subtle parallax effect on scroll for subsidiary cards
   useEffect(() => {
@@ -61,7 +66,9 @@ export const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="home">
+    <>
+      {isLoading && <LoadingScreen onComplete={handleLoadingComplete} duration={2500} />}
+      <div className="home">
       {/* Section Le mot du Président */}
       <section className="president-section" id="section-president">
         <div className="container">
@@ -518,6 +525,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };

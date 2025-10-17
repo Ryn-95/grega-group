@@ -2,6 +2,7 @@ export { Button } from './Button';
 export { Card } from './Card';
 export { AnimatedCounter } from './AnimatedCounter';
 export { Loading } from './Loading';
+export { LoadingScreen } from './LoadingScreen';
 export { BackToTop } from './BackToTop';
 export { TestimonialCard } from './TestimonialCard';
 export { SearchBar } from './SearchBar';
