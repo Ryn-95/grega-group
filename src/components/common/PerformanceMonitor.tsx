@@ -38,7 +38,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // Simulate other metrics (in real implementation, you'd use Web Vitals library)
       const firstInputDelay = 0;
       const cumulativeLayoutShift = 0;
-      const timeToInteractive = navigation.domContentLoadedEventEnd - navigation.navigationStart;
+      const timeToInteractive = navigation.domContentLoadedEventEnd - (navigation.fetchStart || 0);
 
       const performanceMetrics: PerformanceMetrics = {
         loadTime,

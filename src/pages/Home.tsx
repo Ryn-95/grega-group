@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, AnimatedText, ParallaxSection } from '../components/common';
+import { AnimatedText } from '../components/common';
 import './Home.css';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
-  const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,7 +12,6 @@ export const Home: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            setIsVisible((prev) => ({ ...prev, [entry.target.id]: true }));
           }
         });
       },
@@ -33,7 +31,7 @@ export const Home: React.FC = () => {
 
     const handleScroll = () => {
       const cards = scrollContainer.querySelectorAll('.subsidiary-card');
-      const scrollLeft = scrollContainer.scrollLeft;
+      // const scrollLeft = scrollContainer.scrollLeft;
       const containerWidth = scrollContainer.clientWidth;
       
       cards.forEach((card) => {

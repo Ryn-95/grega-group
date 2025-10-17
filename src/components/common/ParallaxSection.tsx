@@ -26,7 +26,7 @@ export const ParallaxSection: React.FC<ParallaxSectionProps> = ({
   useEffect(() => {
     const handleScroll = () => {
       if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
+        // const rect = sectionRef.current.getBoundingClientRect();
         const scrolled = window.pageYOffset;
         const rate = scrolled * -speed;
         setOffset(rate);
